@@ -56,6 +56,7 @@ def service(request):
     return render(request, template)
 
 
+@login_required(login_url='login')
 def contact(request):
     template = 'contact.html'
     return render(request, template)
