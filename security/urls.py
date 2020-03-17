@@ -9,10 +9,10 @@ from django.conf.urls.static import static
 urlpatterns = [
     url('admin/', admin.site.urls),
      url(r'register',registerpage, name='register'),
-     url('',home, name='login'),
+     url(r'^login/$',home, name='login'),
      url(r'^logout/$',Userlogout, name='logout'),
      url(r'^service/$',service, name='service'),
-     url(r'^contact/$',contact, name='contact'),
+     url('',contact, name='contact'),
      url(r'^about/$', Aboutus, name='about'),
      url(r'^MyAccount/$', Myacount, name='account'),
      url(r'index/', include('Mypics.urls'))
