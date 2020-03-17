@@ -26,7 +26,7 @@ def registerpage(request):
     return render(request, template, context)
 
 
-def home(request):
+def loginpage(request):
     if request.user.is_authenticated:
         return redirect('index')
 
