@@ -25,6 +25,7 @@ def registerpage(request):
     context = {'form': form }
     return render(request, template, context)
 
+
 def home(request):
     if request.user.is_authenticated:
         return redirect('index')
@@ -44,29 +45,26 @@ def home(request):
     context = {}
     return render(request, template, context)
 
+
 def Userlogout(request):
     logout(request)
     return redirect('login')
 
 
 
-@login_required(login_url='login')
 def service(request):
     template = 'service.html'
     return render(request, template)
 
 
-@login_required(login_url='login')
 def contact(request):
     template = 'contact.html'
     return render(request, template)
 
-@login_required(login_url='login')
 def Aboutus(request):
     template = 'about.html'
     return render(request, template)
 
-@login_required(login_url='login')
 def Myacount(request):
     template = 'form.html'
     return render(request, template)
